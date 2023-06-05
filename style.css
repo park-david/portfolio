@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+#pages {
+
+}
+
+
+#links {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+img {
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
