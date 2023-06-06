@@ -4,22 +4,62 @@
 }
 
 body {
-    
-}
-
-#pages {
-
-}
-
-
-#links {
+    margin-top: 200px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: 
+        ". . . . . ."
+        ". . picture buttons . ."
+        ". . links links . ."
+        ". . . . . . ";
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+nav:hover button {
+    cursor: pointer;
+}
+
+#me {
+    text-align: center;
+    /* display: grid; */
+    grid-area: picture;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    grid-area: buttons;
+}
+
+/* add pointer on hover to the child buttons */
+#buttons:hover button {
+    cursor: pointer;
 }
 
 
-
-
+#social {
+    border: 2px solid black;
+    width: 200px;
+    height: 50px;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-area: links;
+}
 
 
 img {
