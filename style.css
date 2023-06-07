@@ -1,39 +1,88 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Sulphur Point';
+}
+
+html {
+    height: 100%;
+    width: 100%;
 }
 
 body {
-    background-color: wheat;
-    margin-top: 200px;
+    position: absolute;
+    background-image: linear-gradient(to bottom right, gray,white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+    margin-bottom: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-#grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
-    grid-template-areas: 
-        ". . . . . ."
-        ". . picture buttons . ."
-        ". . links links . ."
-        ". . . . . . ";
-}
-
 nav {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 10px;
+    margin: 20px;
     cursor: pointer;
 }
 
 nav:hover button {
     cursor: pointer;
 }
+
+
+#grid {
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: 
+    ". . . . . ."
+    ". . picture buttons . ."
+    ". . links links . ."
+    ". . . . . . ";
+}
+
+@media (max-width: 500px) {
+    * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body {
+        margin-top: 100px;
+        position: absolute
+    }
+    #me {
+        justify-content: center;
+    }
+    #grid {
+        display: flex;
+        flex-direction: column;
+    }
+    #social {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    #buttons {
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+    }
+    nav {
+        position: fixed;
+        
+    }
+}
+
+
 
 #me {
     text-align: center;
@@ -45,6 +94,7 @@ nav:hover button {
     display: flex;
     flex-direction: column;
     grid-area: buttons;
+    margin-top: 50px;
 }
 
 /* add pointer on hover to the child buttons */
@@ -54,7 +104,6 @@ nav:hover button {
 
 #social {
     display: flex;
-    border: 2px solid black;
     width: 400px;
     height: 30px;
     justify-content: space-evenly;
@@ -66,7 +115,7 @@ nav:hover button {
 img {
     height: 200px;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid black
 }
 
 /* Carousel */
@@ -116,4 +165,5 @@ img {
     height: 300px;
     width: 500px;
     background-color: white;
+    align-self: center;
 }
