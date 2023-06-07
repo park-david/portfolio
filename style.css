@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: wheat;
     margin-top: 200px;
     display: flex;
     flex-direction: row;
@@ -36,7 +37,7 @@ nav:hover button {
 
 #me {
     text-align: center;
-    /* display: grid; */
+    display: grid;
     grid-area: picture;
 }
 
@@ -51,16 +52,16 @@ nav:hover button {
     cursor: pointer;
 }
 
-
 #social {
+    display: flex;
     border: 2px solid black;
-    width: 200px;
-    height: 50px;
+    width: 400px;
+    height: 30px;
     justify-content: space-evenly;
     text-align: center;
     grid-area: links;
+    font-size: larger;
 }
-
 
 img {
     height: 200px;
@@ -68,3 +69,51 @@ img {
     border: 2px solid black;
 }
 
+/* Carousel */
+#carousel {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#carousel-images {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#carousel-images img {
+    width: 100%;
+    display: none;
+}
+
+#carousel-images img:first-of-type {
+    display: block;
+}
+
+#carousel-button {
+    align-self: center;
+    text-align: center;
+}
+
+#prev:hover, #next:hover {
+    cursor: pointer;
+}
+
+#modal {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    height: 80%;
+    width: 80%;
+    z-index: -1;
+}
+
+.modal-button {
+    cursor: pointer;
+}
+
+#modal-box {
+    height: 300px;
+    width: 500px;
+    background-color: white;
+}
