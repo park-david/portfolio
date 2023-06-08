@@ -1,5 +1,5 @@
 const pages = document.querySelectorAll('section')
-const pageButton = document.querySelectorAll('button')
+const pageButton = document.querySelectorAll('a')
 
 for (let i = 0; i < pages.length; i++) {
     const btn = pageButton[i]
@@ -68,4 +68,15 @@ prev.addEventListener('click', () => {
     }
     images[previousImg].style.display = 'none'
     images[currentImg].style.display = 'block'
+})
+
+// contact me submit handler
+const form = document.querySelector('form')
+
+form.addEventListener('submit', function(event) {
+    // prevent actual submission since I have no where to store input
+    event.preventDefault();
+
+    alert('Thank you')
+    modal.style.display = 'none'
 })

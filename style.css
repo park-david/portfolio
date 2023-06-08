@@ -2,6 +2,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Sulphur Point';
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 black;
 }
 
 html {
@@ -10,10 +13,9 @@ html {
 }
 
 body {
-    position: absolute;
-    background-image: linear-gradient(to bottom right, gray,white);
+    position: relative;
+    background-image: linear-gradient(to bottom right, #3e5151,#decba4);
     background-repeat: no-repeat;
-    background-size: cover;
     margin-top: 100px;
     margin-bottom: auto;
     display: flex;
@@ -23,10 +25,7 @@ body {
 }
 
 nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
+    position: relative;
     cursor: pointer;
 }
 
@@ -34,6 +33,31 @@ nav:hover button {
     cursor: pointer;
 }
 
+.name {
+    margin-bottom: 10px;
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+section {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "carousel aboutme";
+}
+
+/* #intro {
+    display: grid;
+    grid-template-areas: aboutme;
+}
+
+#carousel {
+    display: grid;
+    grid-template-areas: carousel;
+} */
 
 #grid {
     position: fixed;
@@ -50,6 +74,18 @@ nav:hover button {
     ". . . . . . ";
 }
 
+#social {
+    display: flex;
+    width: 400px;
+    height: 30px;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-area: links;
+    font-size: larger;
+    margin-top: 30px;
+}
+
+/* for smaller screens */
 @media (max-width: 500px) {
     * {
         margin-left: auto;
@@ -66,11 +102,17 @@ nav:hover button {
         display: flex;
         flex-direction: column;
     }
+
     #social {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 30px;
     }
+
+    #social a {
+        margin-bottom: 10px;
+    }
+
     #buttons {
         margin-left: auto;
         margin-right: auto;
@@ -78,11 +120,9 @@ nav:hover button {
     }
     nav {
         position: fixed;
-        
+        left: 1vh;
     }
 }
-
-
 
 #me {
     text-align: center;
@@ -97,19 +137,13 @@ nav:hover button {
     margin-top: 50px;
 }
 
+#buttons a {
+    margin-bottom: 20px;
+}
+
 /* add pointer on hover to the child buttons */
 #buttons:hover button {
     cursor: pointer;
-}
-
-#social {
-    display: flex;
-    width: 400px;
-    height: 30px;
-    justify-content: space-evenly;
-    text-align: center;
-    grid-area: links;
-    font-size: larger;
 }
 
 img {
@@ -118,16 +152,35 @@ img {
     border: 2px solid black
 }
 
+#about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "a b"
+    "carousel carousel";
+}
+
+h2 {
+    display: grid;
+    grid-area: a;
+}
+
+.aboutMe {
+    display: grid;
+    grid-area: b;
+}
+
 /* Carousel */
 #carousel {
-    width: 50%;
+    width: 400px;
     display: flex;
-    justify-content: space-around;
 }
 
 #carousel-images {
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
+    object-fit: contain;
 }
 
 #carousel-images img {
@@ -148,13 +201,17 @@ img {
     cursor: pointer;
 }
 
+/* contact me modal */
 #modal {
     position: fixed;
-    top: 100px;
-    left: 100px;
-    height: 80%;
-    width: 80%;
-    z-index: -1;
+    top: 0;
+    left: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-button {
@@ -162,8 +219,19 @@ img {
 }
 
 #modal-box {
-    height: 300px;
-    width: 500px;
-    background-color: white;
+    height: 600px;
+    width: 400px;
+    background-color: #3e5151;
     align-self: center;
+    color: black;
+}
+/* font color */
+button, input, textarea {
+    color: black;
+}
+
+/* remove underline from <a> element */
+a {
+    text-decoration: none;
+    text-shadow: 1px 1px 0 black;
 }
