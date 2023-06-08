@@ -25,8 +25,9 @@ body {
 }
 
 nav {
-    position: relative;
+    position: fixed;
     cursor: pointer;
+    z-index: 9999;
 }
 
 nav:hover button {
@@ -40,31 +41,16 @@ nav:hover button {
     text-align: center;
 }
 
-section {
-    width: 50%;
-    height: 50%;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "carousel aboutme";
-}
-
-/* #intro {
-    display: grid;
-    grid-template-areas: aboutme;
-}
-
-#carousel {
-    display: grid;
-    grid-template-areas: carousel;
-} */
-
-#grid {
+.grid {
+    width: 800px;
+    height: 600px;
     position: fixed;
     left: 50%;
-    top: 45%;
+    top: 50%;
     transform: translate(-50%, -50%);
     display: grid;
+    align-items: center;
+    grid-gap: 25px;
     grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr 1fr;
     grid-template-areas: 
@@ -74,7 +60,7 @@ section {
     ". . . . . . ";
 }
 
-#social {
+#social, #carousel {
     display: flex;
     width: 400px;
     height: 30px;
@@ -93,14 +79,15 @@ section {
     }
     body {
         margin-top: 100px;
-        position: absolute
+        position: relative;
     }
-    #me {
+    /* #me {
         justify-content: center;
-    }
-    #grid {
+    } */
+    .grid {
         display: flex;
         flex-direction: column;
+        width: fit-content;
     }
 
     #social {
@@ -118,19 +105,23 @@ section {
         margin-right: auto;
         width: 200px;
     }
+}
+
+@media (max-height: 850px) {
     nav {
         position: fixed;
-        left: 1vh;
+        top: 10px;
+        left: 10px;
     }
 }
 
-#me {
+#me, h2 {
     text-align: center;
     display: grid;
     grid-area: picture;
 }
 
-#buttons {
+#buttons, p {
     display: flex;
     flex-direction: column;
     grid-area: buttons;
@@ -150,25 +141,6 @@ img {
     height: 200px;
     border-radius: 50%;
     border: 2px solid black
-}
-
-#about-me {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "a b"
-    "carousel carousel";
-}
-
-h2 {
-    display: grid;
-    grid-area: a;
-}
-
-.aboutMe {
-    display: grid;
-    grid-area: b;
 }
 
 /* Carousel */
@@ -203,15 +175,13 @@ h2 {
 
 /* contact me modal */
 #modal {
-    position: fixed;
     top: 0;
-    left: 1;
+    left: 0;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    width: 100%;
-    height: 100%;
 }
 
 .modal-button {
@@ -219,15 +189,40 @@ h2 {
 }
 
 #modal-box {
-    height: 600px;
+    height: 280px;
     width: 400px;
     background-color: #3e5151;
     align-self: center;
     color: black;
 }
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+submit, #modal-close {
+    display: flex;
+    width: max-content;
+}
+
+button:hover, a:hover, nav:hover {
+    scale: 1.1;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
 /* font color */
 button, input, textarea {
     color: black;
+    text-shadow: none;
 }
 
 /* remove underline from <a> element */
