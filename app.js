@@ -21,23 +21,7 @@ for (let i = 0; i < pages.length; i++) {
     }
 }
 
-// contact me modal
-const modal = document.getElementById('modal')
-const modalBtn = document.getElementById('modal-open')
-const close = document.getElementById('modal-close')
 
-
-modal.style.display = 'none'
-
-const openModal = () => {
-    modal.style.display = 'block'
-}
-const closeModal = () => {
-    modal.style.display = 'none'
-}
-
-modalBtn.addEventListener('click', openModal)
-close.addEventListener('click', closeModal)
 
 
 // about me carousel
@@ -70,13 +54,33 @@ prev.addEventListener('click', () => {
     images[currentImg].style.display = 'block'
 })
 
+// contact me modal
+const modal = document.getElementById('modal')
+const modalBtn = document.getElementById('modal-open')
+const close = document.getElementById('modal-close')
+
+
+modal.style.display = 'none'
+
+const openModal = () => {
+    modal.style.display = 'block'
+}
+const closeModal = () => {
+    modal.style.display = 'none'
+}
+
+modalBtn.addEventListener('click', openModal)
+close.addEventListener('click', closeModal)
+
 // contact me submit handler
 const form = document.querySelector('form')
 
 form.addEventListener('submit', function(event) {
     // prevent actual submission since I have no where to store input
     event.preventDefault();
-
+    // clear inputs in contact me modal
+    form.reset()
     alert('Thank you')
     modal.style.display = 'none'
 })
+

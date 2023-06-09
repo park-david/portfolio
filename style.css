@@ -76,6 +76,7 @@ nav:hover button {
     * {
         margin-left: auto;
         margin-right: auto;
+        max-width: 100%;
     }
     body {
         margin-top: 100px;
@@ -105,13 +106,23 @@ nav:hover button {
         margin-right: auto;
         width: 200px;
     }
-}
 
-@media (max-height: 850px) {
+    p {
+        padding: 10px
+    }
+
     nav {
         position: fixed;
-        top: 10px;
-        left: 10px;
+        top: 20px;
+        left: 20px;
+    }
+}
+
+@media (max-height: 600px) {
+    nav {
+        position: fixed;
+        top: 20px;
+        left: 20px;
     }
 }
 
@@ -153,6 +164,7 @@ img {
     width: 100%;
     box-sizing: border-box;
     object-fit: contain;
+    
 }
 
 #carousel-images img {
@@ -175,9 +187,10 @@ img {
 
 /* contact me modal */
 #modal {
-    top: 0;
-    left: 0;
-    position: absolute;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,8 +202,8 @@ img {
 }
 
 #modal-box {
-    height: 280px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
     background-color: #3e5151;
     align-self: center;
     color: black;
@@ -205,13 +218,22 @@ input[type=text], textarea {
     margin-right: auto;
 }
 
-submit, #modal-close {
+footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button, #modal-close {
     display: flex;
     width: max-content;
 }
 
 button:hover, a:hover, nav:hover {
     scale: 1.1;
+}
+
+#modalSubmit {
+    height: fit-content;
 }
 
 textarea {
