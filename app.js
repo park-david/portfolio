@@ -1,3 +1,4 @@
+// single page application
 const pages = document.querySelectorAll('section')
 const pageButton = document.querySelectorAll('a')
 
@@ -20,9 +21,6 @@ for (let i = 0; i < pages.length; i++) {
         page.style.display = 'none'
     }
 }
-
-
-
 
 // about me carousel
 const next = document.querySelector('.next')
@@ -58,7 +56,6 @@ prev.addEventListener('click', () => {
 const modal = document.getElementById('modal')
 const modalBtn = document.getElementById('modal-open')
 const close = document.getElementById('modal-close')
-
 
 modal.style.display = 'none'
 

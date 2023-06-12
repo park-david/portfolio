@@ -14,14 +14,28 @@ html {
 
 body {
     position: relative;
-    background-image: linear-gradient(to bottom right, #3e5151,#decba4);
-    background-repeat: no-repeat;
+    /* background: linear-gradient(to bottom right, #3e5151, #decba4); */
+    background: linear-gradient(to bottom right, #304352, #d7d2cc);
+    background-size: 400% 400%;
     margin-top: 100px;
     margin-bottom: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    animation: gradient 15s ease-in infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 nav {
@@ -82,40 +96,31 @@ nav:hover button {
         margin-top: 100px;
         position: relative;
     }
-    /* #me {
-        justify-content: center;
-    } */
     .grid {
         display: flex;
         flex-direction: column;
         width: fit-content;
     }
-
     .skillsLogo {
         position: absolute;
         top: 6%;
-
     }
     #social {
         display: flex;
         flex-direction: column;
         margin-top: 30px;
     }
-
     #social a {
         margin-bottom: 10px;
     }
-
     #buttons {
         margin-left: auto;
         margin-right: auto;
         width: 200px;
     }
-
     p {
         padding: 10px
     }
-
     nav {
         position: fixed;
         top: 20px;
@@ -123,7 +128,7 @@ nav:hover button {
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 760px) {
     nav {
         position: fixed;
         top: 20px;
@@ -169,7 +174,6 @@ img {
     width: 100%;
     box-sizing: border-box;
     object-fit: contain;
-    
 }
 
 #carousel-images img {
@@ -262,9 +266,26 @@ a {
 .skillsLogo {
     grid-area: logo;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-top: 10px;
+    justify-content: center;
 }
+
+.skillsLogo .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.skillsLogo .logo:hover + .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
 .logo {
     border: none;
     height: 50px;
