@@ -277,6 +277,10 @@ a {
     justify-content: center;
 }
 
+.skillsLogo img {
+    border-radius: 0;
+}
+
 .skillsLogo .tooltip {
     position: absolute;
     bottom: 100%;
