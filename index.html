@@ -1,122 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Park Portfolio</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="app.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">    
-</head>
-<body>
-    <nav id="links">
-        <a href="#" id="homeBtn">Home</a>
-    </nav>
-
-    <section id="home">
-        <div class="grid">
-            <div id="me">
-                <h1 class="name">David Park</h1>
-                <img class="portrait" src="assets/portrait.png" alt="picture of me">
-            </div>
-
-            <div id="buttons">
-                <a href="#" class="aBtn"><h1>About Me</h1></a>
-                <a href="#" class="aBtn"><h1>Projects</h1></a>
-                <a href="#" class="modal-button" id="modal-open"><h1>Contact Me</h1></a>
-
-                <div id="modal">
-                    <div id="modal-box">
-                        <form>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" autocomplete="off" required>
-
-                            <label for="email">Email</label>
-                            <input type="text" id="email" name="email" autocomplete="off" required>
-
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                            <footer>
-                                <button id="modalSubmit" type="submit">Submit</button>
-                                <a href="#" class="modal-button" id="modal-close">Close</a>
-                            </footer>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div id="social">
-                <a href="https://github.com/park-david" target="_blank">github</a>
-                <a href="https://www.linkedin.com/in/park-david/" target="_blank">linkedin</a>
-                <a href="assets/resume.pdf" target="_blank">resume</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about me">
-        <div class="grid">
-            <h2 class="pageTitle">About Me</h2>
-            <p class="aboutMe">I'm David and I'm from Seattle, Washington. I have a degree in Psychology and I'm currently a software engineering student at General Assembly. In my free time I enjoy playing video games, working out, and watching sports.</p>
-            <div id="carousel">
-                <div id="carousel-container">
-                    <div class="carousel-button prev">
-                        <a href="#" id="prev">previous</a>
-                    </div>
-                </div>
-                <div id="carousel-images">
-                    <img src="assets/seahawks logo.png" class="images">
-                    <img src="assets/lakers logo.png" class="images">
-                    <img src="assets/man united logo.png" class="images">
-                    <img src="assets/f1 logo.png" class="images">
-                </div>
-                <div class="carousel-button next">
-                    <a href="#" id="next">next</a>
-                </div>
-            </div>
-            <div class="skillsLogo">
-                <!-- <img class="logo" src="assets/github.svg" alt="GitHub">
-                <span class="tooltip">GitHub</span> -->
-                <img class="logo" src="assets/javascript.svg" alt="JavaScript">
-                <span class="tooltip">JavaScript</span>
-                <img class="logo" src="assets/node-js.svg" alt="NodeJS">
-                <span class="tooltip">NodeJS</span>
-                <img class="logo" src="assets/express.svg" alt="Express">
-                <span class="tooltip">Express</span>
-                <img class="logo" src="assets/html-5.svg" alt="HTML">
-                <span class="tooltip">HTML</span>
-                <img class="logo" src="assets/python.svg" alt="Python">
-                <span class="tooltip">Python</span>
-                <img class="logo" src="assets/mongodb.svg" alt="MongoDB">
-                <span class="tooltip">MongoDB</span>
-                <img class="logo" src="assets/postgresql.svg" alt="PostgreSQL">
-                <span class="tooltip">PostgreSQL</span>
-                <img class="logo" src="assets/django.svg" alt="Django">
-                <span class="tooltip">Django</span>
-                <img class="logo" src="assets/react.svg" alt="React">
-                <span class="tooltip">React</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="grid">
-            <h2 class="pageTitle">Projects</h2>
-            <ul>
-                <p>
-                    <a href="https://java-book-a57dc0cae3ed.herokuapp.com/" target="_blank">JavaBook</a>|
-                    <a href="https://github.com/alexcibski/JavaBook" target="_blank">GitHub</a>
-                </p>
-                <p>
-                    <a href="https://monitor-reviews-154641efa8e1.herokuapp.com/" target="_blank">Monitor Reviews</a>|
-                    <a href="https://github.com/park-david/MEN-Stack-Application" target="_blank">GitHub</a>
-                </p>
-                <p>
-                    <a href="https://all-f1-5090b40bdcf1.herokuapp.com/" target="_blank">All F1</a>|
-                    <a href="https://github.com/park-david/all-f1" target="_blank">GitHub</a>
-                </p>
-            </ul>
-        </div>
-        </section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+* {
+  font-family: 'Passion One', cursive;
+}
+
+.pages {
+  background: linear-gradient(to right, #92a7b7, #d7d2cc);
+}
+
+.navBar {
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+}
+
+section {
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  padding-bottom: 200px;
+}
+
+img {
+  width: 70px;
+  min-width: 40px;
+}
+
+.menu a {
+  font-size: 25px;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+  color: black;
+  background-color: lightskyblue;
+  border-radius: 10px;
+}
+
+section#contact {
+  min-height: 400px;
+}
+
+section#about {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.portrait {
+  width: 200px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+div.ui.vertical.navBar.menu {
+  width: fit-content;
+  z-index: 9999;
+}
+
+div.ui.text.container {
+  width: 300px;
+  height: fit-content;
+}
+
+p {
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+@media (max-width: 794px) {
+  div.ui.vertical.navBar.menu {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+  section {
+    padding: 5px
+  }
+}
+
+div.ui.grid {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+}
