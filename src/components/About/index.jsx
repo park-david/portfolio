@@ -16,7 +16,7 @@ export default function About() {
                 <div className="skills">
                     <Image
                       centered
-                      src={`src/assets/skills/${imageName}`}
+                      src={`../assets/skills/${imageName}`}
                       alt={`Skill ${index}`}
                     />
                 </div>

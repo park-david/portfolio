@@ -60,7 +60,7 @@ export default function App() {
             </Link>
           </Menu.Item>
           <Menu.Item>
-              <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume </a>
+              <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume </a>
           </Menu.Item>
         </Menu>
 
