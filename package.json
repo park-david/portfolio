@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "module","homepage": "https://park-david.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
