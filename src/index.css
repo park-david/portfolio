@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-  font-family: 'Passion One', cursive;
+font-family: 'Poppins', sans-serif;
 }
 
 .pages {
