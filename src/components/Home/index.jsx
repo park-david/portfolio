@@ -6,7 +6,7 @@ export default function Home() {
             <Container>
                 <img className="portrait" src="assets/portrait.png" alt="Portrait" />
                 <h1>Hello, I'm David</h1>
-                <p>Full-Stack Software Engineer</p>
+                <h3>Full-Stack Software Engineer</h3>
             </Container>
         </section>
     )

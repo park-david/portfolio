@@ -2,8 +2,8 @@ import { Grid, Image, Container } from "semantic-ui-react"
 
 const skillImages = [
   'javascript.svg', 'python.svg', 'react.svg', 'css3.svg', 'django.svg',
-  'express.svg', 'github.svg', 'html-5.svg', 'mongodb.svg', 'node-js.svg',
-  'postgresql.svg', 'react.svg'
+  'express.svg', 'postgresql.svg', 'html-5.svg', 'mongodb.svg', 'node-js.svg', 'github.svg'
+  
 ]
 
 export default function About() {
@@ -12,8 +12,8 @@ export default function About() {
       <h1>About Me</h1>
       <Grid>
         <Grid.Row centered>
-          <Container text>
-            <p>I'm a software engineer based in Seattle Washington. I'm passionate about making applications that are user-friendly for people of all technology proficiencies.</p>
+          <Container>
+            <h3>I'm a software engineer based in Seattle Washington. I'm passionate about making applications that are user-friendly for people of all technological proficiencies.</h3>
           </Container>
         </Grid.Row>
         <Grid.Row centered>
