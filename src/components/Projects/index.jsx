@@ -18,7 +18,7 @@ const projects = [
     },
     {
         name: "JavaBook",
-        description: "JavaBook project.",
+        description: "Full-stack Django web application with comprehensive CRUD functionality across multiple data models. Utilizing a PostgreSQL database, it allows for the creation, reading, updating, and deletion of content. Serving as a coffee diary, JavaBook chronicles coffees to coffee makers, allowing users to add tasting notes and ratings, to leaving reviews.",
         links: [
             {
                 label: "Live Demo",
@@ -64,7 +64,7 @@ export default function Projects() {
         ),
         render: () => (
             <Tab.Pane>
-                <Card centered>
+                <Card fluid>
                     <p>{project.description}</p>
                     {project.links.map((link, index) => (
                         <span key={index}>
