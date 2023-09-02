@@ -101,3 +101,9 @@ div.ui.grid {
   justify-content: center;
   max-width: 600px;
 }
+
+.projectImage {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
