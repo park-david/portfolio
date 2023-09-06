@@ -90,11 +90,13 @@ export default function Projects() {
     return (
         <section id="projects">
             <Container>
-                <h1>My Projects</h1>
-                <Tab
-                    panes={panes}
-                    activeIndex={panes.findIndex((pane) => pane.menuItem.props.name === activeTab)}
-                />
+                <div className="projectTab">
+                    <h1>My Projects</h1>
+                    <Tab
+                        panes={panes}
+                        activeIndex={panes.findIndex((pane) => pane.menuItem.props.name === activeTab)}
+                    />
+                </div>
             </Container>
         </section>
     );

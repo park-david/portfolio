@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .pages {
@@ -94,6 +94,10 @@ h1 {
   section {
     padding: 5px
   }
+
+  div.projectTab {
+    margin: 0;
+  }
 }
 
 div.ui.grid {
@@ -106,4 +110,13 @@ div.ui.grid {
   width: 100%;
   justify-content: center;
   display: flex;
+}
+
+div.ui.attached.tabular.menu {
+  overflow-y: hidden;
+  min-width: 400px;
+}
+
+.projectTab {
+  margin: 100px;
 }
