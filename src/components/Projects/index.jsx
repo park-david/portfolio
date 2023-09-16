@@ -4,7 +4,7 @@ import { Card, Container, Menu, Tab } from "semantic-ui-react";
 const projects = [
     {
         name: "All F1",
-        description: "Full-stack MERN (MongoDB, Express.js, React, Node.js) application. Integrates a third-party API, establishing a connection with the backend database. This integration empowers the application to offer comprehensive CRUD (Create, Read, Update, Delete) functionality. All F1 serves as a resource for Formula 1 enthusiasts, delivering information on the current season's drivers, their respective points, constructor standings, and intricate details about the circuits, creating an all-in-one hub for Formula 1 aficionados.",
+        description: "Full-stack MERN (MongoDB, Express.js, React, Node.js) application. Integrates a third-party API, establishing a connection with the backend database. This integration empowers the application to offer comprehensive CRUD (Create, Read, Update, Delete) functionality.",
         picture: "assets/all-f1.png",
         links: [
             {
@@ -19,7 +19,7 @@ const projects = [
     },
     {
         name: "JavaBook",
-        description: "Full-stack Django web application with comprehensive CRUD functionality across multiple data models. Utilizing a PostgreSQL database, it allows for the creation, reading, updating, and deletion of content. Serving as a coffee diary, JavaBook chronicles coffees to coffee makers, allowing users to add tasting notes and ratings, to leaving reviews.",
+        description: "Full-stack Django web application with comprehensive CRUD functionality across multiple data models. Utilizing a PostgreSQL database, it allows for the creation, reading, updating, and deletion of content.",
         picture: "assets/javabook.png",
         links: [
             {
@@ -34,7 +34,7 @@ const projects = [
     },
     {
         name: "Monitor Reviews",
-        description: "MEN (MongoDB, Express.js, Node.js) application, with a specific emphasis on the gaming and office monitor niche. Features an MVC file structure, RESTful routes, and a full CRUD system. These elements were carefully implemented to enable efficient management of monitor reviews and information.",
+        description: "MEN (MongoDB, Express.js, Node.js) application, with a specific emphasis on the gaming and office monitor niche. Features an MVC file structure, RESTful routes, and a full CRUD system.",
         picture: "assets/monitor-reviews.png",
         links: [
             {
@@ -79,7 +79,7 @@ export default function Projects() {
                             >
                                 {link.label}
                             </a>
-                            {index < project.links.length - 1 && " | "}
+                            {index < project.links.length - 1}
                         </span>
                     ))}
                 </Card>
