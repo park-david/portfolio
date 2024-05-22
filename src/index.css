@@ -1,122 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
 
-* {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #20242d;
   font-family: 'Poppins', sans-serif;
+  font-weight: 800;
 }
 
-.pages {
-  background: linear-gradient(to right, #92a7b7, #d7d2cc);
+span,
+.primary-color {
+  background-image: linear-gradient(to right, #a79e5d, #fffd88);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.navBar {
-  display: flex;
-  position: fixed;
-  height: 100vh;
-  overflow: hidden;
-  justify-content: center;
-  text-align: center;
-}
-
-section {
-  min-height: 100vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100vw;
-  padding-bottom: 200px;
-}
-
-img {
-  width: 70px;
-  min-width: 40px;
-}
-
-.menu a {
-  font-size: 25px;
-  color: black;
-}
-
-a:hover {
-  cursor: pointer;
-  color: black;
-  background-color: lightskyblue;
-  border-radius: 10px;
-}
-
-section#contact {
-  min-height: 400px;
-}
-
-section#about {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.portrait {
-  width: 200px;
-  border-radius: 50%;
-  border: 2px solid black;
-}
-
-div.ui.vertical.navBar.menu {
-  width: fit-content;
-  z-index: 9999;
-}
-
-div.ui.text.container {
-  width: 300px;
-  height: fit-content;
-}
-
-p {
-  font-size: 18px;
-  width: 100%;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-@media (max-width: 794px) {
-  div.ui.vertical.navBar.menu {
-      display: flex;
-      flex-direction: row;
-      width: 100vw;
-      height: auto;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-  section {
-    padding: 5px
-  }
-
-  div.projectTab {
-    margin: 0;
-  }
-}
-
-div.ui.grid {
-  display: flex;
-  justify-content: center;
-  max-width: 600px;
-}
-
-.projectImage {
-  width: 100%;
-  justify-content: center;
-  display: flex;
-}
-
-div.ui.attached.tabular.menu {
-  overflow-y: hidden;
-  min-width: 400px;
-}
-
-.projectTab {
-  margin: 100px;
+.bg-primary-color {
+  background-image: linear-gradient(to right, #2a2819, #595d1a);
 }
